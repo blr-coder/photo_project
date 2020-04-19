@@ -21,7 +21,7 @@
                     </nav>
                 </div>
                 <div class="col-sm-4 text-right">
-                    <a href="#" class="btn-primary mt-1">Добавить новый альбом</a>
+                    <a href="{{ action('Admin\AlbumController@create') }}" class="btn-primary mt-1">Добавить новый альбом</a>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {{--@foreach($albums as $album)
+                        @foreach($albums as $album)
                             <tr>
                                 <td><img src="/storage/uploaded_images/albums/small/{{ $album->image_for_desktop_small }}" class="img-fluid" alt="{{ $album->title }}"></td>
                                 <td><img src="/storage/uploaded_images/albums/mobile/{{ $album->image_for_mobile }}" class="img-fluid" alt="{{ $album->title }}"></td>
@@ -57,11 +57,11 @@
                                     <div class="row">
 
                                         <div class="col-12">
-                                            <a href="{{ action('Admin\AlbumController@edit', [$album]) }}" class="btn-edit w-100">Редактировать</a>
+                                            <a href="" class="btn-edit w-100">Редактировать</a>
                                         </div>
 
                                         <div class="col-12">
-                                            <form method="post" action="{{ action('Admin\AlbumController@delete', [$album]) }}">
+                                            <form method="post" action="">
                                                 @csrf
                                                 @method('DELETE')
                                                 <div>
@@ -71,13 +71,13 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <a href="{{ action('Admin\PhotoController@index', [$album]) }}" class="btn-edit w-100">Фотографии</a>
+                                            <a href="" class="btn-edit w-100">Фотографии</a>
                                         </div>
 
                                     </div>
                                 </td>
                             </tr>
-                        @endforeach--}}
+                        @endforeach
                         </tbody>
                     </table>
 

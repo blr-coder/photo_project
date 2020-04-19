@@ -30,7 +30,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Альбомы</a>
+                        <a href="{{ action('Admin\AlbumController@index') }}" class="nav-link">Альбомы</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Категории</a>

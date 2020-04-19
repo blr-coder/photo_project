@@ -10,7 +10,7 @@ Route::group(
     [
         'prefix' => 'admin',
         'namespace' => 'Admin',
-//        'middleware' =>['auth', 'can:adminPanel'],
+        'middleware' =>['auth', 'can:adminPanel'],
     ],
 
     function () {
@@ -19,6 +19,8 @@ Route::group(
 
         /** Album */
         Route::get('albums', 'AlbumController@index');
+        Route::get('albums/create', 'AlbumController@create');
+        Route::post('albums/store', 'AlbumController@store');
     }
 );
 
