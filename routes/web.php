@@ -14,7 +14,11 @@ Route::group(
     ],
 
     function () {
+        /** Admin */
         Route::get('/', 'AdminController@index')->name('admin.index');
+
+        /** Album */
+        Route::get('albums', 'AlbumController@index');
     }
 );
 
