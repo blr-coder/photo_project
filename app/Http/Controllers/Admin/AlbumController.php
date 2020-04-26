@@ -23,10 +23,16 @@ class AlbumController extends Controller
         $data = $request->all();
 
         $data += ['slug' => $slugService->makeSlug($data['title'], 'albums')];
-        $data += ['image' => $imageService->saveImage($request->file('image_file'), 'albums', 1920, 1080)];
+        $data += ['desktop_image' => $imageService->saveImage($request->file('desktop_image_file'), 'albums/desktop', 800, 800)];
+        $data += ['mobile_image' => $imageService->saveImage($request->file('mobile_image_file'), 'albums/mobile', 400, 400)];
 
         $album = Album::create($data);
 
         return redirect()->action('Admin\AlbumController@index')->with('flash_message', "Альбом {$album->title} добавлен!");
+    }
+
+    public function delete(Album $album) {
+        $album->delete();
+        return redirect()->action('Admin\AlbumController@index')->with('flash_message', "Альбом {$album->title} удалён!");
     }
 }

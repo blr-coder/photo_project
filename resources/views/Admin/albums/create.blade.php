@@ -78,11 +78,22 @@
                     </div>
 
                     <div class="form-group col-lg-6 col-12">
-                        <label for="image_file">Изображение (горизонтальная ориентация)</label>
-                        <input type="file" class="form-control @error('image_file') is-invalid @enderror" id="image_file" name="image_file" required>
-                        @error('image_file')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('image_file') }}</strong>
+                        <label for="desktop_image_file">Изображение (Desktop)</label>
+                        <input type="file" class="form-control @error('desktop_image_file') is-invalid @enderror" id="desktop_image_file" name="desktop_image_file" required>
+                        @error('desktop_image_file')
+                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('desktop_image_file') }}</strong>
+                            </span>
+                        @enderror
+                        <p class="help-block">Файл будет приведен к размерам 1920px * 1080px</p>
+                    </div>
+
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="mobile_image_file">Изображение (Mobile)</label>
+                        <input type="file" class="form-control @error('mobile_image_file') is-invalid @enderror" id="mobile_image_file" name="mobile_image_file" required>
+                        @error('mobile_image_file')
+                        <span class="invalid-feedback" role="alert">
+                                <strong>{{ $errors->first('mobile_image_file') }}</strong>
                             </span>
                         @enderror
                         <p class="help-block">Файл будет приведен к размерам 1920px * 1080px</p>

@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
 class Album extends Model
 {
@@ -12,7 +13,8 @@ class Album extends Model
         'description',
         'date',
 
-        'image',
+        'desktop_image',
+        'mobile_image',
 
         'photographer',
         'location',
@@ -22,4 +24,11 @@ class Album extends Model
     {
         return $this->hasMany(Photo::class);
     }*/
+
+    public function delete()
+    {
+        if (!empty($this->image)) Storage::delete('/public/uploaded_images/albums/' . $this->image);
+
+        return parent::delete();
+    }
 }

@@ -1,0 +1,380 @@
+#main
+    //@font-face
+    //    font-family: 'Lato'
+    //    src: local('Lato-Light')
+    //    src: url(fonts/Lato/Lato-Light.ttf)
+    //    font-weight: 300
+    //    font-style: normal
+    //
+    //@font-face
+    //    font-family: 'Lato'
+    //    src: local('Lato-Regular')
+    //    src: url(fonts/Lato/Lato-Regular.ttf)
+    //    font-weight: 400
+    //    font-style: normal
+    //
+    //@font-face
+    //    font-family: 'Lato'
+    //    src: local('Lato-Bold')
+    //    src: url(fonts/Lato/Lato-Bold.ttf)
+    //    font-weight: 700
+    //    font-style: normal
+    //
+    //
+    //@font-face
+    //    font-family: 'Lato'
+    //    src: local('Lato-Black')
+    //    src: url(fonts/Lato/Lato-Black.ttf)
+    //    font-weight: 900
+    //    font-style: normal
+    //
+    //@font-face
+    //    font-family: 'Oswald'
+    //    src: local("Oswald-Regular")
+    //    src: url(fonts/Oswald/Oswald-Regular.ttf)
+    //    font-weight: 400
+    //    font-style: normal
+    //
+    //@font-face
+    //    font-family: 'Oswald'
+    //    src: local("Oswald-ExtraLight")
+    //    src: url(fonts/Oswald/Oswald-ExtraLight.ttf)
+    //    font-weight: 200
+    //    font-style: normal
+
+    $mainFontColor: #ffffff
+    $secondFontColor: #949494
+    $mainFont: 'Lato', Sans-serif
+    $secondFont: 'Oswald', Sans-serif
+    $bgColor: rgb(10, 10, 10)
+
+    //*
+    //    margin: 0
+    //    padding: 0
+
+    .html
+        font-size: 10px
+
+    .site
+        margin-top: 128px
+
+    .container
+        width: 80%
+        max-width: 1280px
+        margin-left: auto
+        margin-right: auto
+        height: auto
+
+    .header
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        display: flex
+        align-items: center
+        height: 128px
+        background-image: url(images/header-bg.png)
+        z-index: 2
+
+
+    .header-wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    .header .nav
+        width: 400px
+
+    .nav ul
+        display: flex
+        justify-content: space-between
+
+    .nav ul li
+        list-style: none
+        display: inline-block
+
+    .nav a
+        text-decoration: none
+        color: $mainFontColor
+        font-family: $mainFont
+        font-weight: 700
+        font-size: 1.3rem
+        letter-spacing: 1.2px
+        text-transform: uppercase
+        height: auto
+        padding-top: 20px
+        padding-bottom: 20px
+        position: relative
+
+    .nav a:after
+        display: block
+        position: absolute
+        left: 0
+        width: 0
+        height: 1px
+        background-color: #fff
+        content: ""
+            transition: width 0.3s ease-out
+
+    .nav a:hover:after,
+    .nav a:focus:after
+        width: 100%
+
+
+    .banner
+        height: auto
+        background-color: $bgColor
+
+    .sliders img
+        height: auto
+        width: 100%
+
+
+    .contacts-up
+        height: 90px
+        background-color: $bgColor
+
+    .contacts-up
+        display: flex
+        align-items: center
+
+    .contact-up-wrapper
+        display: flex
+        justify-content: space-between
+
+
+    .contact-left a
+        color: $secondFontColor
+        font-family: $mainFont
+        font-size: 1.5rem
+        font-weight: 400
+        text-decoration: none
+
+
+    .contact-right a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 30px
+        height: 30px
+
+
+    .contact-right a:hover
+        outline: 1px solid $secondFontColor
+        transition: ease-in-out .3s
+
+
+    .mail
+        background: url(images/mail.png) no-repeat left
+        margin-right: 15px
+        padding-left: 20px
+
+
+    .phone
+        background: url(images/phone_c.png) no-repeat left
+        padding-left: 20px
+
+
+    .contact-right
+        width: 200px
+        display: flex
+        justify-content: space-between
+
+    .project
+        height: auto
+        background-color: $bgColor
+        padding-bottom: 70px
+        border-bottom: 1px solid $secondFontColor
+
+    .project h2
+        position: relative
+        font-family: $secondFont
+        font-size: 3.6rem
+        font-weight: 200
+        text-transform: uppercase
+        line-height: 1.8em
+        letter-spacing: 0.72px
+        color: $mainFontColor
+        margin-left: 175px
+
+
+
+    .project h2::before
+        content: ""
+        border-bottom: 1px solid $mainFontColor
+        position: absolute
+        width: 35%
+        left: -350px
+        top: 50%
+
+
+    .projests-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-top: 20px
+        margin-bottom: 70px
+
+
+    .projests-wrapper div
+        width: 32%
+        height: auto
+        margin-bottom: 20px
+
+
+    .projests-wrapper div img
+        width: 100%
+        height: auto
+
+
+    .projests-wrapper.hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: $mainFontColor
+        opacity: 0
+
+
+    .projests-wrapper.image
+        position: relative
+
+
+        .image.first:hover .hidden.first-hidden
+        .image.second:hover .hidden.second-hidden
+        .image.third:hover .hidden.third-hidden
+        .image.fourth:hover .hidden.fourth-hidden
+        .image.fifth:hover .hidden.fifth-hidden
+        .image.sixth:hover .hidden.sixth-hidden
+        .image.seventh:hover .hidden.seventh-hidden
+        .image.eighth:hover .hidden.eighth-hidden
+        .image.nineth:hover .hidden.nineth-hidden
+        .image.tenth:hover .hidden.tenth-hidden
+        .image.eleventh:hover .hidden.eleventh-hidden
+        .image.twelveth:hover .hidden.twelveth-hidden
+
+            opacity: 1
+            z-index: 1
+            transition: ease .4s
+            justify-content: center
+            background-color: #000000
+            outline: 1px solid #646464
+
+        .projests-wrapper span
+            font-family: $secondFont
+            font-size: 2.4rem
+            color: $mainFontColor
+            text-transform: uppercase
+            font-weight: 200
+            letter-spacing: 0.68px
+
+    .button
+        display: block
+        margin-left: auto
+        margin-right: auto
+        width: 168px
+        height: 50px
+        background-color: transparent
+        border: 1px solid $secondFontColor
+        color: $mainFontColor
+        color: #ffffff
+        font-family: $mainFont
+        font-weight: 400
+        line-height: 1em
+        letter-spacing: 1.1px
+        font-size: 1.6rem
+        cursor: pointer
+        outline: none
+
+
+    .button:hover
+        background-color: #ffffff
+        color: $bgColor
+        transition: ease-in-out .3s
+
+
+    .contacts-down
+        background-color: black
+        padding-top: 70px
+        padding-bottom: 60px
+
+
+    .contacts-down__columns
+        display: flex
+        justify-content: space-between
+
+
+    .columns
+        flex-basis: 25%
+
+
+    .columns h4
+        color: $mainFontColor
+        font-family: $secondFont
+        font-size: 1.7rem
+        font-weight: 300
+        text-transform: uppercase
+        letter-spacing: 0.68px
+        margin-bottom: 20px
+
+    .column-first p
+        color: $mainFontColor
+        font-family: $mainFont
+        font-size: 1.4rem
+        font-weight: 300
+        letter-spacing: 0.1px
+        margin-top: 20px
+
+
+    .columns .nav ul
+        flex-direction: column
+
+    .columns .nav ul li
+        margin-top: 20px
+
+
+    .column-second
+        margin-left: 100px
+
+
+    .columns .contact-right a
+        border: none
+
+
+    .columns .contact-right
+        width: 160px
+        margin-left: -10px
+
+
+    .columns .contact-left
+        display: flex
+        flex-direction: column
+        height: 60px
+        justify-content: space-between
+        margin-bottom: 20px
+
+
+    .columns span
+        font-size: 1rem
+
+
+
+    .columns .projests-wrapper div
+        margin-bottom: 5px
+
+
+    .footer
+        display: flex
+        align-items: center
+        background-color: $bgColor
+        height: 50px
+        color: $secondFontColor
+        font-family: $mainFont
+        font-size: 1.4rem
+        font-weight: 300
+        text-align: center
+

@@ -16,7 +16,8 @@ class CreateAlbumsTable extends Migration
             $table->text('description')->nullable();
             $table->date('date')->nullable();
 
-            $table->string('image');
+            $table->string('desktop_image');
+            $table->string('mobile_image');
 
             $table->string('photographer')->nullable();
             $table->string('location')->nullable();

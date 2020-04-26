@@ -6,6 +6,7 @@ namespace App\Services;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\DB;
 
 
 class ImageService
@@ -15,15 +16,13 @@ class ImageService
     {
         if (empty($filename))
             $filename = Str::random(32) . '.' . $image->getClientOriginalExtension();
-        else
-            $filename = $filename . '.' . $image->getClientOriginalExtension();
-        $path = storage_path('app/public/uploads/' . $folder . '/' . $filename);
+        $path = storage_path('app/public/uploaded_images/' . $folder . '/' . $filename);
 
         $existed_directories = Storage::allDirectories('public');   // массив всех существующих директорий в "public"
 
         if(!in_array($path, $existed_directories))
         {
-            Storage::makeDirectory('public/uploads/' . $folder); // если данного пути не существует, то создаём его.
+            Storage::makeDirectory('public/uploaded_images/' . $folder); // если данного пути не существует, то создаём его.
         }
 
         if (!empty($height))

@@ -15,10 +15,11 @@ class CreateRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:albums|string|max:190',
-            'description' => 'nullable|max:5000',
+            'description' => 'nullable|max:500',
             'date' => 'nullable|date',
 
-            'image_file' => 'required|image|max:2048',
+            'desktop_image_file' => 'required|image|max:2048',
+            'mobile_image_file' => 'required|image|max:1024',
 
             'photographer' => 'nullable|string|max:190',
             'location' => 'nullable|string|max:190',

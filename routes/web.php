@@ -20,7 +20,9 @@ Route::group(
         /** Album */
         Route::get('albums', 'AlbumController@index');
         Route::get('albums/create', 'AlbumController@create');
-        Route::post('albums/store', 'AlbumController@store');
+        Route::post('albums', 'AlbumController@store');
+
+        Route::delete('albums/{album}', 'AlbumController@delete');
     }
 );
 
@@ -28,6 +30,10 @@ Route::group(
 /////ADMIN-PANEL////////////ADMIN-PANEL////////////ADMIN-PANEL////////////ADMIN-PANEL////////////ADMIN-PANEL///////
 
 Route::get('/', function () {
+    return view('index');
+});
+
+Route::get('/welcome', function () {
     return view('welcome');
 });
 

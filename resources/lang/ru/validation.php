@@ -192,8 +192,8 @@ return [
         'size'                  => 'Размер',
 
         /** Articles create */
-        'desktop_image_file'       => '"Изображение для больших экранов"',
-        'mobile_image_file'        => '"Изображение для для мобильных устройств"',
+        'desktop_image_file'       => '"Изображение (Desktop)"',
+        'mobile_image_file'        => '"Изображение (Mobile)"',
         'image_file'               => '"Изображение"',
         'preview'                  => '"Превью"',
         'photographer'             => '"Фотограф"',
