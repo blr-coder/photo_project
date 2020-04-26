@@ -10903,15 +10903,68 @@ a.text-dark:focus {
   font: inherit;
 }
 
-#main .html {
+@font-face {
+  font-family: "Lato";
+  src: local("Lato-Light");
+  src: url(/fonts/Lato-Light.ttf?2fe27d9d10cdfccb1baef28a45d5ba90);
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato-Regular");
+  src: url(/fonts/Lato-Regular.ttf?2d36b1a925432bae7f3c53a340868c6e);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato-Bold");
+  src: url(/fonts/Lato-Bold.ttf?85d339d916479f729938d2911b85bf1f);
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato-Black");
+  src: url(/fonts/Lato-Black.ttf?e631d2735799aa943d93d301abf423d2);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald-Regular");
+  src: url(/fonts/Oswald-Regular.ttf?e1996192b98a516646ff9a8c0c0ca90c);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: local("Oswald-ExtraLight");
+  src: url(/fonts/Oswald-ExtraLight.ttf?319cbb285349e4a7755670bed8bb8c8a);
+  font-weight: 200;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
   font-size: 10px;
 }
 
-#main .site {
+.site {
   margin-top: 128px;
 }
 
-#main .container {
+.container {
   width: 80%;
   max-width: 1280px;
   margin-left: auto;
@@ -10919,7 +10972,7 @@ a.text-dark:focus {
   height: auto;
 }
 
-#main .header {
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -10931,27 +10984,27 @@ a.text-dark:focus {
   z-index: 2;
 }
 
-#main .header-wrapper {
+.header-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#main .header .nav {
+.header .nav {
   width: 400px;
 }
 
-#main .nav ul {
+.nav ul {
   display: flex;
   justify-content: space-between;
 }
 
-#main .nav ul li {
+.nav ul li {
   list-style: none;
   display: inline-block;
 }
 
-#main .nav a {
+.nav a {
   text-decoration: none;
   color: #ffffff;
   font-family: "Lato", Sans-serif;
@@ -10965,7 +11018,7 @@ a.text-dark:focus {
   position: relative;
 }
 
-#main .nav a:after {
+.nav a:after {
   display: block;
   position: absolute;
   left: 0;
@@ -10973,40 +11026,40 @@ a.text-dark:focus {
   height: 1px;
   background-color: #fff;
   content: "";
-  content-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
 }
 
-#main .nav a:hover:after,
-#main .nav a:focus:after {
+.nav a:hover:after,
+.nav a:focus:after {
   width: 100%;
 }
 
-#main .banner {
+.banner {
   height: auto;
   background-color: #0a0a0a;
 }
 
-#main .sliders img {
+.sliders img {
   height: auto;
   width: 100%;
 }
 
-#main .contacts-up {
+.contacts-up {
   height: 90px;
   background-color: #0a0a0a;
 }
 
-#main .contacts-up {
+.contacts-up {
   display: flex;
   align-items: center;
 }
 
-#main .contact-up-wrapper {
+.contact-up-wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-#main .contact-left a {
+.contact-left a {
   color: #949494;
   font-family: "Lato", Sans-serif;
   font-size: 1.5rem;
@@ -11014,7 +11067,7 @@ a.text-dark:focus {
   text-decoration: none;
 }
 
-#main .contact-right a {
+.contact-right a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11022,36 +11075,36 @@ a.text-dark:focus {
   height: 30px;
 }
 
-#main .contact-right a:hover {
+.contact-right a:hover {
   outline: 1px solid #949494;
   transition: ease-in-out 0.3s;
 }
 
-#main .mail {
+.mail {
   background: url(/images/mail.png?6cbd595b5e061f73552c21293e6dde4f) no-repeat left;
   margin-right: 15px;
   padding-left: 20px;
 }
 
-#main .phone {
+.phone {
   background: url(/images/phone_c.png?3e3e65ec470db1853529efd3a4c96c74) no-repeat left;
   padding-left: 20px;
 }
 
-#main .contact-right {
+.contact-right {
   width: 200px;
   display: flex;
   justify-content: space-between;
 }
 
-#main .project {
+.project {
   height: auto;
   background-color: #0a0a0a;
   padding-bottom: 70px;
   border-bottom: 1px solid #949494;
 }
 
-#main .project h2 {
+.project h2 {
   position: relative;
   font-family: "Oswald", Sans-serif;
   font-size: 3.6rem;
@@ -11063,7 +11116,7 @@ a.text-dark:focus {
   margin-left: 175px;
 }
 
-#main .project h2::before {
+.project h2::before {
   content: "";
   border-bottom: 1px solid #ffffff;
   position: absolute;
@@ -11072,7 +11125,7 @@ a.text-dark:focus {
   top: 50%;
 }
 
-#main .projests-wrapper {
+.projests-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -11080,18 +11133,18 @@ a.text-dark:focus {
   margin-bottom: 70px;
 }
 
-#main .projests-wrapper div {
+.projests-wrapper div {
   width: 32%;
   height: auto;
   margin-bottom: 20px;
 }
 
-#main .projests-wrapper div img {
+.projests-wrapper div img {
   width: 100%;
   height: auto;
 }
 
-#main .projests-wrapper.hidden {
+.projests-wrapper .hidden {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11104,11 +11157,22 @@ a.text-dark:focus {
   opacity: 0;
 }
 
-#main .projests-wrapper.image {
+.projests-wrapper .image {
   position: relative;
 }
 
-#main .projests-wrapper.image .image.twelveth:hover .hidden.twelveth-hidden {
+.image.first:hover .hidden.first-hidden,
+.image.second:hover .hidden.second-hidden,
+.image.third:hover .hidden.third-hidden,
+.image.fourth:hover .hidden.fourth-hidden,
+.image.fifth:hover .hidden.fifth-hidden,
+.image.sixth:hover .hidden.sixth-hidden,
+.image.seventh:hover .hidden.seventh-hidden,
+.image.eighth:hover .hidden.eighth-hidden,
+.image.nineth:hover .hidden.nineth-hidden,
+.image.tenth:hover .hidden.tenth-hidden,
+.image.eleventh:hover .hidden.eleventh-hidden,
+.image.twelveth:hover .hidden.twelveth-hidden {
   opacity: 1;
   z-index: 1;
   transition: ease 0.4s;
@@ -11117,7 +11181,7 @@ a.text-dark:focus {
   outline: 1px solid #646464;
 }
 
-#main .projests-wrapper.image .projests-wrapper span {
+.projests-wrapper span {
   font-family: "Oswald", Sans-serif;
   font-size: 2.4rem;
   color: #ffffff;
@@ -11126,7 +11190,7 @@ a.text-dark:focus {
   letter-spacing: 0.68px;
 }
 
-#main .button {
+.button {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -11145,28 +11209,28 @@ a.text-dark:focus {
   outline: none;
 }
 
-#main .button:hover {
+.button:hover {
   background-color: #ffffff;
   color: #0a0a0a;
   transition: ease-in-out 0.3s;
 }
 
-#main .contacts-down {
+.contacts-down {
   background-color: black;
   padding-top: 70px;
   padding-bottom: 60px;
 }
 
-#main .contacts-down__columns {
+.contacts-down__columns {
   display: flex;
   justify-content: space-between;
 }
 
-#main .columns {
+.columns {
   flex-basis: 25%;
 }
 
-#main .columns h4 {
+.columns h4 {
   color: #ffffff;
   font-family: "Oswald", Sans-serif;
   font-size: 1.7rem;
@@ -11176,7 +11240,7 @@ a.text-dark:focus {
   margin-bottom: 20px;
 }
 
-#main .column-first p {
+.column-first p {
   color: #ffffff;
   font-family: "Lato", Sans-serif;
   font-size: 1.4rem;
@@ -11185,28 +11249,28 @@ a.text-dark:focus {
   margin-top: 20px;
 }
 
-#main .columns .nav ul {
+.columns .nav ul {
   flex-direction: column;
 }
 
-#main .columns .nav ul li {
+.columns .nav ul li {
   margin-top: 20px;
 }
 
-#main .column-second {
+.column-second {
   margin-left: 100px;
 }
 
-#main .columns .contact-right a {
+.columns .contact-right a {
   border: none;
 }
 
-#main .columns .contact-right {
+.columns .contact-right {
   width: 160px;
   margin-left: -10px;
 }
 
-#main .columns .contact-left {
+.columns .contact-left {
   display: flex;
   flex-direction: column;
   height: 60px;
@@ -11214,15 +11278,15 @@ a.text-dark:focus {
   margin-bottom: 20px;
 }
 
-#main .columns span {
+.columns span {
   font-size: 1rem;
 }
 
-#main .columns .projests-wrapper div {
+.columns .projests-wrapper div {
   margin-bottom: 5px;
 }
 
-#main .footer {
+.footer {
   display: flex;
   align-items: center;
   background-color: #0a0a0a;

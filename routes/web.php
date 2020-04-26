@@ -29,9 +29,11 @@ Route::group(
 
 /////ADMIN-PANEL////////////ADMIN-PANEL////////////ADMIN-PANEL////////////ADMIN-PANEL////////////ADMIN-PANEL///////
 
-Route::get('/', function () {
+Route::get('/', 'PagesController@index');
+
+/*Route::get('/', function () {
     return view('index');
-});
+});*/
 
 Route::get('/welcome', function () {
     return view('welcome');

@@ -60,10 +60,20 @@
         <div class="container">
             <h2>projects</h2>
             <div class="projests-wrapper">
-                <div class="image first">
+
+                @foreach($albums as $album)
+                    <div class="image second">
+                        <img src="/storage/uploaded_images/albums/desktop/{{ $album->desktop_image }}" alt="#" />
+                        <div class="hidden second-hidden">
+                            <span>{{ $album->title }}</span>
+                        </div>
+                    </div>
+                @endforeach
+
+                {{--<div class="image first">
                     <img src="images/port.png" alt="#" />
                     <div class="hidden first-hidden">
-                        <span>Some text</span>
+                        <span>Some text1</span>
                     </div>
                 </div>
                 <div class="image second">
@@ -131,7 +141,8 @@
                     <div class="hidden twelveth-hidden">
                         <span>Some text 12</span>
                     </div>
-                </div>
+                </div>--}}
+
             </div>
             <button class="button">Load more</button>
         </div>
