@@ -27,7 +27,8 @@ class Album extends Model
 
     public function delete()
     {
-        if (!empty($this->image)) Storage::delete('/public/uploaded_images/albums/' . $this->image);
+        if (!empty($this->desktop_image)) Storage::delete('/public/uploaded_images/albums/desktop/' . $this->desktop_image);
+        if (!empty($this->mobile_image)) Storage::delete('/public/uploaded_images/albums/mobile/' . $this->mobile_image);
 
         return parent::delete();
     }

@@ -60,7 +60,7 @@
 
                                         <div class="col-12">
                                             <div>
-                                                <button class="admin_edit w-100"><a href="#">Редактировать</a></button>
+                                                <button class="admin_edit w-100"><a href="{{ action('Admin\AlbumController@edit', [$album]) }}">Редактировать</a></button>
                                             </div>
                                         </div>
 

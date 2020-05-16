@@ -21,6 +21,8 @@ Route::group(
         Route::get('albums', 'AlbumController@index');
         Route::get('albums/create', 'AlbumController@create');
         Route::post('albums', 'AlbumController@store');
+        Route::get('albums/{album}/edit', 'AlbumController@edit');
+        Route::post('albums/{album}', 'AlbumController@update');
 
         Route::delete('albums/{album}', 'AlbumController@delete');
     }
